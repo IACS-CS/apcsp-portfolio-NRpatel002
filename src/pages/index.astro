@@ -8,14 +8,24 @@ import Page from "../components/Page.astro";
   </h1>
   <h2>Project Menu</h2>
   <nav>
-    <ul>
-      <li>
-        <a href="./projects/binary-search/"> 
-          Binary Search Project 
-        </a>
-      </li>
-      <!-- More projects to come soon! -->
-    </ul>
+  <ul>
+    <NavItem
+      title="Binary Search Project"
+      link="/projects/binary-search/"
+      imageSrc="/images/binary-search.png"
+      blurb="Learn about the binary search algorithm and its implementation."
+    />
+
+    <NavItem
+      title="APCSP Portfolio"
+      link="/projects/portfolio/"
+      imageSrc="/images/portfolio.png"
+      blurb="A showcase of all my AP Computer Science Principles projects."
+    />
+
+    <!-- Add more projects here in the future -->
+  </ul>
+</nav>
   </nav>
   <h2>About Me</h2>
   <p>All About me...</p>
