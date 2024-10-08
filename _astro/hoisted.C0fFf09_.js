@@ -15,14 +15,8 @@ var aos = {exports: {}};
 var aosExports = aos.exports;
 const Aos = /*@__PURE__*/getDefaultExportFromCjs(aosExports);
 
-console.log("What?");
-console.log("Hello world, from main.js!");
+// Initialize AOS (Animate On Scroll) library
 if (typeof window !== "undefined") {
-  // Put code that runs ONLY in the browser here -- this is most likely where
-Aos.init();
-
-  // MOST of your code should go.
-  //
-  // If you see a SSR error, try moving your code here!
-  console.log("Hello world, browser :-)");
+  Aos.init();
+  console.log("Hello world, from main.js!");
 }
