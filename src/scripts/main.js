@@ -8,3 +8,4 @@ if (typeof window !== "undefined") {
   Aos.init();
   console.log("Hello world, from main.js!");
 } 
+import axios from 'axios';
