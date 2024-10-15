@@ -15,7 +15,7 @@ var aos = {exports: {}};
 var aosExports = aos.exports;
 const Aos = /*@__PURE__*/getDefaultExportFromCjs(aosExports);
 
-// Initialize AOS (Animate On Scroll) library
+//Initialize AOS (Animate On Scroll) library
 if (typeof window !== "undefined") {
   Aos.init();
   console.log("Hello world, from main.js!");
