@@ -28,21 +28,38 @@ p {
 }
   
 body {
-  height: 100vh;
   margin: 0;
-  background: linear-gradient(270deg, #FF7E5F, #FEB47B);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  height: 100vh;
+  background-color: black; /* Black background */
+  overflow: hidden; /* Prevent scrollbars */
 }
 
-@keyframes gradient {
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: white; /* Star color */
+  border-radius: 50%; /* Makes it a circle */
+  animation: twinkle 1.5s infinite alternate;
+}
+
+@keyframes twinkle {
   0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
+    opacity: 0;
   }
   100% {
-    background-position: 0% 50%;
+    opacity: 1;
+  }
+}
+
+/* Create multiple stars */
+@keyframes random {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  100% {
+    top: calc(100vh - 2px);
+    left: calc(100vw - 2px);
   }
 }
