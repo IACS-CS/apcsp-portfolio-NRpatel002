@@ -3,9 +3,16 @@ import "../styles/styles.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
- //Initialize AOS (Animate On Scroll) library
-if (typeof window !== "undefined") {
-  Aos.init();
-  console.log("Hello world, from main.js!");
-} 
-import axios from 'axios';
+
+
+Aos.init();
+console.log("Hello world, from main.js!");
+
+import anime from "animejs/lib/anime.es.js";
+anime({
+  targets: ".box",
+  translateX: 250,
+  rotate: "1turn",
+  duration: 1000,
+});
+
