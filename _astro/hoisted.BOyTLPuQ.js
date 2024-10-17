@@ -15,3 +15,5 @@ const Aos = /*@__PURE__*/getDefaultExportFromCjs(aosExports);
 
 Aos.init();
 console.log("Hello world, from main.js!");
+
+export { getDefaultExportFromCjs as g };
