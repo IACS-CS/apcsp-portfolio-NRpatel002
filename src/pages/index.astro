@@ -1,122 +1,72 @@
 ---
 import NavItem from "../components/NavItem.astro";
 import Page from "../components/Page.astro";
-import Carousel from "../components/Carousel.astro";
 ---
 
 <Page title="Dev Patel Portfolio">
 
-  <h1 data-aos="fade-left">Dev Patel</h1>
-  <h1 data-aos="fade-right">Welcome to My Portfolio!</h1>
-  
-  <h2>About Me</h2>
-  <p>Hi, My Name is Dev Patel. I'm 17 and I play soccer and volleyball for the school. I have been going to IACS since sophomore year.</p>
-  
-  <nav>
-    <ul>
-      <!-- You can add more links here -->
-    </ul>
-  </nav>
-
-  <Carousel class="carousel">
-    <article>
-      <figure>
-        <NavItem
-          title="Binary Search Project"
-          link="/projects/binary-search/"
-          blurb="Learn about the binary search algorithm and its implementation."
-          width="170"
-          style="display:block;margin:auto"
-          onClick="showProject('binary-search')"
-        />
-      </figure>
-    </article>
-    <article>
-      <figure>
-        <NavItem
-          title="APCSP Portfolio"
-          link="/projects/portfolio/"
-          blurb="A showcase of all my AP Computer Science Principles projects."
-          width="170"
-          style="display:block;margin:auto"
-          onClick="showProject('portfolio')"
-        />
-      </figure>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus ut nunc ultricies aliquam.</p>
-    </article>
-    <article>
-      <figure>
-        <NavItem
-          title="Turtle Project"
-          link="/projects/turtle/"
-          blurb="A fun project that demonstrates graphics programming."
-          width="170"
-          style="display:block;margin:auto"
-          onClick="showProject('turtle')"
-        />
-      </figure>
-    </article>
-    <article>
-      <figure>
-        <NavItem
-          title="Mash Project"
-          link="/projects/mash/"
-          blurb="A creative project involving random generation and fun outcomes."
-          width="170"
-          style="display:block;margin:auto"
-          onClick="showProject('mash')"
-        />
-      </figure>
-    </article>
-  </Carousel>
-
-  <!-- Full Screen Project View -->
-  <div id="project-full-screen" class="project-full-screen">
-    <div class="content">
-      <h3 id="project-title">Project Title</h3>
-      <p id="project-description">Project description goes here...</p>
-      <button class="close-btn" onclick="closeProject()">X</button>
+  <header class="hero">
+    <div class="container">
+      <h1>Dev Patel</h1>
+      <p>Your guide to my journey in tech and creativity!</p>
+      <a href="#projects" class="cta-btn">Explore Projects</a>
     </div>
-  </div>
+    <div class="hero-background"></div>
+  </header>
 
-  <footer>
-    <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
-      <a property="dct:title" rel="cc:attributionURL" href="https://ubiquitous-space-barnacle-x5vw9p57xvx9c6q9v-4321.app.github.dev/">APCSP Portfolio </a> 
-      by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/NRpatel002">Dev Patel</a> is marked with 
-      <a href="https://creativecommons.org/publicdomain/zero/1.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC0 1.0
-        <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
-        <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/zero.svg?ref=chooser-v1" alt="">
-      </a>
-    </p>
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        Hi! I'm Dev Patel, a 17-year-old student passionate about sports, technology, and creative problem-solving. 
+        Since joining IACS, I’ve built a strong foundation in coding and design while enjoying volleyball and soccer.
+      </p>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <NavItem
+            title="Binary Search Project"
+            link="/projects/binary-search/"
+            blurb="Learn about the binary search algorithm and its implementation."
+          />
+        </div>
+        <div class="project-card">
+          <NavItem
+            title="APCSP Portfolio"
+            link="/projects/portfolio/"
+            blurb="A showcase of all my AP Computer Science Principles projects."
+          />
+        </div>
+        <div class="project-card">
+          <NavItem
+            title="Turtle Project"
+            link="/projects/turtle/"
+            blurb="A fun project that demonstrates graphics programming."
+          />
+        </div>
+        <div class="project-card">
+          <NavItem
+            title="Mash Project"
+            link="/projects/mash/"
+            blurb="A creative project involving random generation and fun outcomes."
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>
+        Designed with 💡 and 🎨 by <a href="https://github.com/NRpatel002">Dev Patel</a> |
+        <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 License</a>
+      </p>
+    </div>
   </footer>
-
-  <script>
-    function showProject(project) {
-      const fullScreen = document.getElementById('project-full-screen');
-      const title = document.getElementById('project-title');
-      const description = document.getElementById('project-description');
-      
-      // Set the project details dynamically
-      if (project === 'binary-search') {
-        title.innerText = 'Binary Search Project';
-        description.innerText = 'Learn about the binary search algorithm and its implementation.';
-      } else if (project === 'portfolio') {
-        title.innerText = 'APCSP Portfolio';
-        description.innerText = 'A showcase of all my AP Computer Science Principles projects.';
-      } else if (project === 'turtle') {
-        title.innerText = 'Turtle Project';
-        description.innerText = 'A fun project that demonstrates graphics programming.';
-      } else if (project === 'mash') {
-        title.innerText = 'Mash Project';
-        description.innerText = 'A creative project involving random generation and fun outcomes.';
-      }
-
-      fullScreen.classList.add('active');
-    }
-
-    function closeProject() {
-      document.getElementById('project-full-screen').classList.remove('active');
-    }
-  </script>
 
 </Page>
