@@ -83,14 +83,14 @@ body {
 /* Projects Section */
 .projects {
   padding: 80px 20px;
-  background: #f9f9f9;
+  background: #1e1e1e;
 }
 
 .projects h2 {
   font-size: 2.8rem;
   text-align: center;
   margin-bottom: 40px;
-  color: #444;
+  color: #fff;
 }
 
 .projects-grid {
@@ -99,20 +99,24 @@ body {
   gap: 20px;
 }
 
+/* Project Card */
 .project-card {
-  background: #fff;
+  background: #2b2b2b;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(77, 75, 75, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
+  border: 1px solid #444;
 }
 
 .project-card:hover {
   transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 20px rgb(69, 68, 68);
+  border-color: #666;
 }
 
+/* Project Card Overlay */
 .project-card::after {
   content: '';
   position: absolute;
@@ -120,11 +124,12 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(102, 153, 255, 0.1);
+  background: rgba(65, 64, 64, 0.05);
   z-index: 1;
   pointer-events: none;
 }
 
+/* NavItem Styles */
 .NavItem {
   position: relative;
   z-index: 2;
@@ -134,14 +139,15 @@ body {
 .NavItem h3 {
   margin: 0;
   font-size: 1.4rem;
-  color: #333;
+  color: #fff;
 }
 
 .NavItem p {
   margin-top: 10px;
   font-size: 1rem;
-  color: #666;
+  color: #bbb;
 }
+
 
 /* Footer */
 .footer {
